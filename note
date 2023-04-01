@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+
+function TodoList() {
+  const [todos, setTodos] = useState([]);
+  const [newTodo, setNewTodo] = useState("");
+
+  const handleNewTodoChange = (event) => {
+    setNewTodo(event.target.value);
+  };
+
+  const handleNewTodoSubmit = (event) => {
+    event.preventDefault();
+    setTodos([...todos, newTodo]);
+    setNewTodo("");
+  };
+
+  return (
+    <div>
+      <h1>To-Do List</h1>
+      <form onSubmit={handleNewTodoSubmit}>
+        <label>
+          New to-do item:
+          <input
+            type="text"
+            value={newTodo}
+            onChange={handleNewTodoChange}
+          />
+        </label>
+        <button type="submit">Add</button>
+      </form>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default TodoList;
