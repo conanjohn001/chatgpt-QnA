@@ -1,4 +1,4 @@
-o code payment with React, you will need to integrate a payment gateway into your React application. The specific steps will depend on which payment gateway you are using, but the general process will look something like this:
+To code payment with React, you will need to integrate a payment gateway into your React application. The specific steps will depend on which payment gateway you are using, but the general process will look something like this:
 
 Choose a payment gateway: There are several payment gateways available, such as Stripe, PayPal, Square, and Braintree. You'll need to choose one that meets your needs and integrates well with React.
 
